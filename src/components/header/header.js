@@ -1,12 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <div>
       <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
+        <div class="container">
           <div class="navbar-header">
             <button
               type="button"
@@ -20,7 +19,9 @@ function Header() {
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand">Ecommerce Bot</a>
+            <Link class="navbar-brand" to="/orders">
+              Ecommerce Bot
+            </Link>
           </div>
 
           <div

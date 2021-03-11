@@ -14,7 +14,8 @@ class Layout extends Component {
             {/* Google DialogFlow Bot */}
             <df-messenger
               intent="WELCOME"
-              chat-title="E-commerceBotPOC"
+              chat-title="Norma"
+              chat-icon="https://www.iconninja.com/files/280/963/747/fav-google-new-logo-icon.svg"
               agent-id="1be3da83-4afe-46c5-9fd9-7dad08e96c9c"
               language-code="en"
             ></df-messenger>

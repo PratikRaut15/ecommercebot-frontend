@@ -1,6 +1,6 @@
 import axios from "axios";
-
 import React, { Component } from "react";
+import api from "../../axios";
 
 export default class Delivery extends Component {
   state = {
@@ -8,7 +8,16 @@ export default class Delivery extends Component {
   };
   componentDidMount() {
     axios
-      .post("http://localhost:3000/getAllDelivery")
+      .post(`${api}getAllDelivery`)
+      .then((res) => {
+        console.log(res);
+        this.setState({ arrData: res.data });
+      })
+      .catch((err) => console.log(err));
+  }
+  componentDidUpdate() {
+    axios
+      .post(`${api}getAllDelivery`)
       .then((res) => {
         console.log(res);
         this.setState({ arrData: res.data });

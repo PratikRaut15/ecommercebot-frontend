@@ -8,7 +8,7 @@ function home() {
           <img
             src="https://raw.githubusercontent.com/dpmanek/images/main/Laptop.jpg"
             class="img-responsive img-thumbnail"
-            alt="Responsive image"
+            alt="Responsive"
           />
         </div>
 
@@ -27,7 +27,7 @@ function home() {
           <img
             src="https://raw.githubusercontent.com/dpmanek/images/main/Laptop.jpg"
             class="img-responsive img-thumbnail"
-            alt="Responsive image"
+            alt="Responsive"
           />
         </div>
 
@@ -46,7 +46,7 @@ function home() {
           <img
             src="https://raw.githubusercontent.com/dpmanek/images/main/Laptop.jpg"
             class="img-responsive img-thumbnail"
-            alt="Responsive image"
+            alt="Responsive"
           />
         </div>
 

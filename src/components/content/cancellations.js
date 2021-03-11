@@ -1,4 +1,5 @@
 import axios from "axios";
+import api from "../../axios";
 
 import React, { Component } from "react";
 
@@ -8,7 +9,17 @@ export default class Cancellation extends Component {
   };
   componentDidMount() {
     axios
-      .post("http://localhost:3000/getAllCancellationDetails")
+      .post(`${api}getAllCancellationDetails`)
+      .then((res) => {
+        console.log(res);
+        this.setState({ arrData: res.data });
+      })
+      .catch((err) => console.log(err));
+  }
+
+  componentDidUpdate() {
+    axios
+      .post(`${api}getAllCancellationDetails`)
       .then((res) => {
         console.log(res);
         this.setState({ arrData: res.data });

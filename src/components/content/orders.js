@@ -1,4 +1,5 @@
 import axios from "axios";
+import api from "../../axios";
 
 import React, { Component } from "react";
 
@@ -6,13 +7,21 @@ export default class orders extends Component {
   state = {
     arrData: [],
   };
+
   componentDidMount() {
     axios
-      .post("http://localhost:3000/getAllOrders")
+      .post(`${api}getAllOrders`)
+      .then((res) => this.setState({ arrData: res.data }))
+      .catch((err) => console.log(err));
+  }
+  componentDidUpdate() {
+    axios
+      .post(`${api}getAllOrders`)
       .then((res) => this.setState({ arrData: res.data }))
       .catch((err) => console.log(err));
   }
   render() {
+    console.log("api", api);
     if (this.state.arrData.length > 0) {
     }
     return (
